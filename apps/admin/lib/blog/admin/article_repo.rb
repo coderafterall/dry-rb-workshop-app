@@ -1,9 +1,8 @@
+require "blog/repository"
+
 module Blog
   module Admin
-    class ArticleRepo
-      def create(_)
-        true
-      end
+    class ArticleRepo < Blog::Repository[:articles]
     end
   end
 end
