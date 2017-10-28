@@ -1,19 +1,20 @@
+require "blog/operation"
 require "blog/admin/import"
-require "dry/monads"
+require_relative "form_schema"
 
 module Blog
   module Admin
     module Articles
-      class Create
-        include Blog::Admin::Import["article_repo"]
+      class Create < Blog::Operation
+        include Import["article_repo"]
 
         def call(attributes)
           validation = FormSchema.(attributes)
 
           if validation.success?
-            Dry::Monads::Right(article_repo.create(validation.to_h))
+            Right(article_repo.create(validation.to_h))
           else
-            Dry::Monads::Left(validation)
+            Left(validation)
           end
         end
       end
