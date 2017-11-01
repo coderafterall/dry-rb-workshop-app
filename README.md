@@ -18,6 +18,8 @@ Clone this repository:
 $ git clone https://github.com/dry-rb/workshop-app
 ```
 
+### Using local environment
+
 Set up the app:
 
 ```sh
@@ -31,6 +33,25 @@ $ bundle exec shotgun -p 3000 -o 0.0.0.0 config.ru
 ```
 
 Then browse the app at [localhost:3000](http://localhost:3000).
+
+### Using docker
+
+Create and start containers
+
+```sh
+$ docker-compose up
+```
+
+Set up the app:
+
+```sh
+$ docker-compose exec app bin/setup
+```
+
+To run spec:
+```sh
+$ docker-compose exec app rspec
+```
 
 # Exercises
 
