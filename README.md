@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/coderafterall/dry-rb-workshop-app.svg?branch=master)](https://travis-ci.org/coderafterall/dry-rb-workshop-app)
+
 # dry-rb/rom-rb workshop app
 
 This is the companion app for 2017's series of [dry-rb](http://dry-rb.org/) and [rom-rb](http://rom-rb.org/) workshops conducted by [Tim Riley](https://github.com/timriley).
