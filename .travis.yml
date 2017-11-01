@@ -4,6 +4,7 @@ before_script:
   - bin/prepare_ci_repo
   - cp .env-travis .env
   - createdb dry_rb_workshop_blog_test
+  - bundle exec rake db:migrate
 script:
   - bundle exec rspec
 rvm:
