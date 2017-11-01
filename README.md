@@ -36,10 +36,18 @@ Then browse the app at [localhost:3000](http://localhost:3000).
 
 ### Using docker
 
-Create and start containers
+Set as `DATABASE_URL` the following url in `.env`:
+
+`DATABASE_URL='postgres://postgres:secret@db/dry_rb_workshop_blog_development'`
+
+And this one in `.env.test`:
+
+`DATABASE_URL='postgres://postgres:secret@db/dry_rb_workshop_blog_test'`
+
+Create and start containers:
 
 ```sh
-$ docker-compose up
+$ docker-compose up -d
 ```
 
 Set up the app:
